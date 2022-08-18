@@ -12,6 +12,7 @@ Tests are not written so far
 
 ![word search example](/images/real-call.png)
 **Second call**
+
 ![word search from cache](/images/call-from-cache.png)
 
 # How to run this project?
