@@ -8,9 +8,10 @@ The current state the project:
 
 Tests are not written so far
 
-First call
+**First call**
+
 ![word search example](/images/real-call.png)
-Second call
+**Second call**
 ![word search from cache](/images/call-from-cache.png)
 
 # How to run this project?
