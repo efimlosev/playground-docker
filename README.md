@@ -1,4 +1,4 @@
-# The New Project here
+**# The New Project here
 I will use this project as a playground to develop skills needed to find a new job
 
 The current state the project:
@@ -10,7 +10,7 @@ Tests are not written so far
 
 **First call**
 
-![word search example](/images/real-call.png
+![word search example](/images/real-call.png)
 
 **Second call**
 
@@ -38,4 +38,4 @@ SECRET_KEY="The string you generated on the previous step"
 - Finally
 ```bash
 docker-compose  up
- ```
+ ```**
