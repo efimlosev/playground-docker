@@ -10,7 +10,8 @@ Tests are not written so far
 
 **First call**
 
-![word search example](/images/real-call.png)
+![word search example](/images/real-call.png
+
 **Second call**
 
 ![word search from cache](/images/call-from-cache.png)
