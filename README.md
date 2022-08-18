@@ -38,4 +38,4 @@ SECRET_KEY="The string you generated on the previous step"
 - Finally
 ```bash
 docker-compose  up
- ```**
+ ```
