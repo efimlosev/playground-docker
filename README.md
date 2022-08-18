@@ -1,4 +1,4 @@
-**# The New Project here
+# The New Project here
 I will use this project as a playground to develop skills needed to find a new job
 
 The current state the project:
