@@ -70,13 +70,3 @@ SECRET_KEY="The string you generated on the previous step"
 ```bash
 docker-compose up
  ```
- context
-```bash
-APP_ID="Your Oxford  APP_ID"
-APP_KEY="Your Oxford  APP_KEY"
-SECRET_KEY="The string you generated on the previous step"
-```
-- Finally
-```bash
-docker-compose up
- ```
