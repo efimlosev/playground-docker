@@ -29,7 +29,7 @@ cd playground-docker
 ``` bash 
 python3 -c 'import secrets; print(secrets.token_hex())'
 ```
-- Time to put everything together. Create .env file in the root the project with the simular context
+- Time to put everything together. Create .env file in the root of the project with the simular context
 ```bash
 APP_ID="Your Oxford  APP_ID"
 APP_KEY="Your Oxford  APP_KEY"
