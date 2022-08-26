@@ -6,7 +6,7 @@ The current state of the project:
 - a couple of Docker files to for the app and the Redis host
 - a docker-compose file
 
-Tests are not written so far.
+~~tests are not written so far~~. Wrote some tests
 
 **First call**
 
