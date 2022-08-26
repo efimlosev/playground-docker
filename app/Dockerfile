@@ -9,8 +9,10 @@ ENV SECRET_KEY=""
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
+COPY lru.py .
+COPY web_interface.py .
+COPY templates templates
 EXPOSE 5000
-CMD [ "python", "./lru.py" ]
+CMD [ "python", "./web_interface.py" ]
 
 
