@@ -19,10 +19,16 @@ services:
     network_mode: "bridge"
 
   lru:
-    image: efimius/redis
+    image: redis:7.0.4
+    command: ["redis-server","/conf/redis.conf"]
+    volumes:
+      - ./redis:/conf
     ports:
       - "6379:6379"
     network_mode: "bridge"
+
+
+
 
 
    
