@@ -49,17 +49,17 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-            #          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/app:buildcache
-            #          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/app:buildcache,mode=max
-            #          
-            #    - 
-            #      name: Build and push redis
-            #      uses: docker/build-push-action@v3
-            #      with:
-            #          context: redis
-            #          push: ${{ github.event_name != 'pull_request' }}
-            #          tags: ${{ steps.meta.outputs.tags }}
-            #          labels: ${{ steps.meta.outputs.labels }}
-            #          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/redis:buildcache
-            #          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/redis:buildcache,mode=max
-            #      
+          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/app:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/app:buildcache,mode=max
+          
+    - 
+      name: Build and push redis
+      uses: docker/build-push-action@v3
+      with:
+          context: redis
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/redis:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/redis:buildcache,mode=max
+      
