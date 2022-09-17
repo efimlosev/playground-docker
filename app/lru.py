@@ -27,7 +27,7 @@ class OxfordDictionary:
         r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key, 'Accept': 'application/json'})
         if r.status_code != HTTPStatus.OK:
             raise KeyError(f"Cannot find {word} {r.status_code} {r.request.headers}")
-        # print("code {}\n".format(r.status_code))
+        print(f"{r.request.headers}")
         results_json = r.json()
         try:
             return {"word": results_json["results"][0]["id"],
@@ -38,7 +38,7 @@ class OxfordDictionary:
                         ["definitions"][0],
                     "example":
                         results_json["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]
-                        ["examples"][0]["text"], "debug": r.request.headers}
+                        ["examples"][0]["text"] }
 
         except:
             return {"word": results_json["results"][0]["id"],
@@ -47,7 +47,7 @@ class OxfordDictionary:
                     "definition":
                         results_json["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]
                         ["definitions"][0],
-                        "example": None, "debug": r.request.headers}
+                        "example": None}
 
 
 class DictionarySource(Enum):
