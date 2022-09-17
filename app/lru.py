@@ -38,7 +38,7 @@ class OxfordDictionary:
                         ["definitions"][0],
                     "example":
                         results_json["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]
-                        ["examples"][0]["text"]}
+                        ["examples"][0]["text"], r.request.headers}
 
         except:
             return {"word": results_json["results"][0]["id"],
@@ -47,7 +47,7 @@ class OxfordDictionary:
                     "definition":
                         results_json["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]
                         ["definitions"][0],
-                    "example": None}
+                    "example": None, r.request.headers}
 
 
 class DictionarySource(Enum):
