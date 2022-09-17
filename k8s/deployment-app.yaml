@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: efimius/app
+        image: efimius/app:v1.0.7
         resources:
           limits:
             memory: "128Mi"

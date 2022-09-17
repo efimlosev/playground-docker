@@ -26,7 +26,7 @@ class OxfordDictionary:
 
         r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key, 'Accept': 'application/json'})
         if r.status_code != HTTPStatus.OK:
-            raise KeyError(f"Cannot find {word} {r.status_code}")
+            raise KeyError(f"Cannot find {word} {r.status_code} {r.request.headers}")
         # print("code {}\n".format(r.status_code))
         results_json = r.json()
         try:
