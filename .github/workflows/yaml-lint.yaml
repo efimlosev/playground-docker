@@ -33,5 +33,5 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with unittest
       run: |
-         for i in $(ls *.yaml); do  yamllint $i; done
+         for i in $(ls *.yaml); do  yamllint -d relaxed $i; done
            
