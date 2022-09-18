@@ -4,6 +4,8 @@ metadata:
   name: redis-config
   labels:
     app: redis
+  namespace: app-test
+
 data:
   redis.conf: |
     

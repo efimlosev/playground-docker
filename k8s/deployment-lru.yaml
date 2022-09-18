@@ -1,18 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: redis
+  name: lru
+  namespace: app-test
 spec:
   selector:
     matchLabels:
-      app: redis
+      app: lru
   template:
     metadata:
       labels:
-        app: redis
+        app: lru
     spec:
       containers:
-      - name: redis
+      - name: lru
         image: redis:7.0.4
         command: [ "redis-server", "/conf/redis.conf"]
         resources:
