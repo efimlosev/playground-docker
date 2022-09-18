@@ -1,49 +1,45 @@
---- 
+---
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: app
   namespace: app-test
-spec: 
-  selector: 
-    matchLabels: 
+spec:
+  selector:
+    matchLabels:
       app: app
-  template: 
-    metadata: 
-      labels: 
+  template:
+    metadata:
+      labels:
         app: app
-    spec: 
-      containers: 
-        - 
-          env: 
-            - 
+    spec:
+      containers:
+        -
+          env:
+            -
               name: APP_KEY
-              valueFrom: 
-                secretKeyRef: 
+              valueFrom:
+                secretKeyRef:
                   key: app_key
                   name: app-keys
-            - 
+            -
               name: APP_ID
-              valueFrom: 
-                secretKeyRef: 
+              valueFrom:
+                secretKeyRef:
                   key: app_id
                   name: app-keys
-            - 
+            -
               name: SECRET_KEY
-              valueFrom: 
-                secretKeyRef: 
+              valueFrom:
+                secretKeyRef:
                   key: secret_key
                   name: app-keys
           image: "efimius/app:v1.0.8"
           name: app
-          ports: 
-            - 
+          ports:
+            -
               containerPort: 5000
-          resources: 
-            limits: 
+          resources:
+            limits:
               cpu: 500m
               memory: 128Mi
-
-            
-
-

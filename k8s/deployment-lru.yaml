@@ -1,48 +1,44 @@
---- 
+---
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: lru
   namespace: app-test
-spec: 
-  selector: 
-    matchLabels: 
+spec:
+  selector:
+    matchLabels:
       app: lru
-  template: 
-    metadata: 
-      labels: 
+  template:
+    metadata:
+      labels:
         app: lru
-    spec: 
-      containers: 
-        - 
-          command: 
+    spec:
+      containers:
+        -
+          command:
             - redis-server
             - /conf/redis.conf
           image: "redis:7.0.4"
           name: lru
-          ports: 
-            - 
+          ports:
+            -
               containerPort: 6379
-          resources: 
-            limits: 
+          resources:
+            limits:
               cpu: 500m
               memory: 128Mi
-          volumeMounts: 
-            - 
+          volumeMounts:
+            -
               mountPath: /conf/
               name: conf
-            - 
+            -
               mountPath: /data/
               name: data
-      volumes: 
-        - 
+      volumes:
+        -
           emptyDir: {}
           name: data
-        - 
-          configMap: 
+        -
+          configMap:
             name: redis-config
           name: conf
-
-            
-
-

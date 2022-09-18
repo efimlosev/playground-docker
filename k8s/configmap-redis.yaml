@@ -1,13 +1,13 @@
---- 
+---
 apiVersion: v1
-data: 
+data:
   redis.conf: |
-      
+
       maxmemory 1MB
       maxmemory-policy allkeys-lfu
 kind: ConfigMap
-metadata: 
-  labels: 
+metadata:
+  labels:
     app: redis
   name: redis-config
   namespace: app-test
