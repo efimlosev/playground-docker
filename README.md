@@ -1,4 +1,4 @@
-![dockerbuild](https://github.com/efimlosev/playground-docker/blob/main/.github/workflows/docker-image.yml/badge.svg)
+![dockerbuild](https://github.com/efimlosev/playground-docker/actions/workflows/docker-image.yml/badge.svg) ![dockerbuild](https://github.com/efimlosev/playground-docker/actions/workflows/python-package.yml/badge.svg)
 
 # date: 09/18/2022 Update 
 I made a  functional kubernetes deployment, that reside in **k8s** folder.
