@@ -1,3 +1,7 @@
+# date: 09/18/2022 Update 
+I made a  functional kubernetes deployment, that reside in k8S folder.
+
+
 # The New Project here
 I will use this project as a playground to develop skills needed to find a new job
 
@@ -5,6 +9,7 @@ The current state of the project:
 - an app that fetches data from  Oxford dictionary and then stores that data in the dockerized Redis instance
 - a couple of Docker files to for the app and the Redis host
 - a docker-compose file
+- a fully functional Kubernetes deploynent 
 
 ~~tests are not written so far~~. Wrote some tests
 
