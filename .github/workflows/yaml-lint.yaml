@@ -6,8 +6,11 @@ name: yamllint
 on:
   push:
     branches: [ "main" ]
+    paths: ["*.yaml", "*.yml"]
   pull_request:
     branches: [ "main" ]
+    paths: ["*.yaml", "*.yml"]
+  
 defaults:
   run:
     working-directory: k8s
