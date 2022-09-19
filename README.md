@@ -1,5 +1,5 @@
 # date: 09/18/2022 Update 
-I made a  functional kubernetes deployment, that reside in k8S folder.
+I made a  functional kubernetes deployment, that reside in **k8s** folder.
 
 
 # The New Project here
