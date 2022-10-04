@@ -6,23 +6,20 @@ import time
 from redis import Redis, exceptions
 from os import environ
 
+
 class OxfordDictionary:
 
     def search(self, word):
-        # for more information on how to install requests
-        # http://docs.python-requests.org/en/master/user/install/#install
 
         app_id = environ['APP_ID']
         app_key = environ['APP_KEY']
-        # app_id = "bla"
-        # app_key = "bla"
 
         language = 'en-us'
         word_id = word
         fields = 'definitions,examples'
         strictMatch = 'true'
 
-        url = 'https://od-api.oxforddictionaries.com:443/api/v2/entries/' + language + '/' + word_id.lower() + '?fields=' + fields + '&strictMatch=' + strictMatch;
+        url = 'https://od-api.oxforddictionaries.com:443/api/v2/entries/' + language + '/' + word_id.lower() + '?fields=' + fields + '&strictMatch=' + strictMatch
 
         r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key, 'Accept': 'application/json'})
         if r.status_code != HTTPStatus.OK:
@@ -37,7 +34,7 @@ class OxfordDictionary:
                         ["definitions"][0],
                     "example":
                         results_json["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]
-                        ["examples"][0]["text"] }
+                        ["examples"][0]["text"]}
 
         except:
             return {"word": results_json["results"][0]["id"],
@@ -46,13 +43,12 @@ class OxfordDictionary:
                     "definition":
                         results_json["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]
                         ["definitions"][0],
-                        "example": None}
+                    "example": None}
 
 
 class DictionarySource(Enum):
-    LOCAL = 1
-    CACHE = 2
-    OXFORD_ONLINE = 3
+    CACHE = 1
+    OXFORD_ONLINE = 2
 
     def __str__(self):
         return self.name
@@ -125,9 +121,5 @@ def main():
             print(f"Error when searching: {str(e)}\n")
 
 
-
-
-
 if __name__ == '__main__':
-    o = OxfordDictionary()
-    print(dir(o.search))
+    main()
